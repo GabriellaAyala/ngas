@@ -1,3 +1,11 @@
-<p>
-  login works!
-</p>
+<form (ngSubmit)="onLogin(f)" #f="ngForm">
+  <label for="email">Email:</label>
+  <input type="text" name="email" id="email" ngModel>
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" ngModel>
+  <button type="submit">Login</button>
+</form>
+
+<button (click)="onLogout()">Logout</button>
+
+<p *ngIf="user">Someone logged in, email: {{ user.email }}</p>

@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './core/login/login.component';
 import { ApprenticeDashComponent } from './apprentice-dash/apprentice-dash.component';
@@ -21,7 +24,9 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-    AngularFireDatabaseModule,
+    FormsModule,
+    CoreModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.config)
   ],
   providers: [],
