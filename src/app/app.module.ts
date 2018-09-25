@@ -13,6 +13,8 @@ import { ReportComponent } from './report/report.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { ComponentChatComponent } from './component-chat/component-chat.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     SupervisorDashComponent,
     ReportComponent,
     NavbarComponent,
+    ComponentChatComponent,
+    ChatBoxComponent,
   ],
   imports: [
     AppRoutingModule,
