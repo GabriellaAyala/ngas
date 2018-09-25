@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireModule } from 'angularfire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 
@@ -12,6 +12,7 @@ import { SupervisorDashComponent } from './supervisor-dash/supervisor-dash.compo
 import { ReportComponent } from './report/report.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,15 @@ import { environment } from '../environments/environment';
     ApprenticeDashComponent,
     SupervisorDashComponent,
     ReportComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     CoreModule,
-    AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.config)
+    // AngularFirestoreModule,
+    // AngularFireModule.initializeApp(environment.config)
   ],
   providers: [],
   bootstrap: [AppComponent]
