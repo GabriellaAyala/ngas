@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { AngularFireModule } from 'angularfire';
-// import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 
@@ -13,7 +13,6 @@ import { ReportComponent } from './report/report.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
-import { ComponentChatComponent } from './component-chat/component-chat.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
     SupervisorDashComponent,
     ReportComponent,
     NavbarComponent,
-    ComponentChatComponent,
     ChatBoxComponent,
   ],
   imports: [
@@ -32,8 +30,8 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
     BrowserModule,
     FormsModule,
     CoreModule,
-    // AngularFirestoreModule,
-    // AngularFireModule.initializeApp(environment.config)
+     AngularFirestoreModule,
+   AngularFireModule.initializeApp(environment.config)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,8 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 
 const routes: Routes = [
-  {path : '', component: LoginComponent},
+  {path : '', component: ChatBoxComponent, pathMatch: 'full'},
+  {path : 'login', component: LoginComponent},
   {path : 'report', component: ReportComponent},
   {path : 'apprentice-dashboard', component: ApprenticeDashComponent},
   {path : 'supervisor-dashboard', component: SupervisorDashComponent},
