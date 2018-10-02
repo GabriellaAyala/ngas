@@ -8,12 +8,11 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 
 const routes: Routes = [
-  {path : '', component: ChatBoxComponent, pathMatch: 'full'},
+  {path : '', redirectTo: 'apprentice-dashboard', pathMatch: 'full'},
   {path : 'login', component: LoginComponent},
   {path : 'report', component: ReportComponent},
   {path : 'apprentice-dashboard', component: ApprenticeDashComponent},
   {path : 'supervisor-dashboard', component: SupervisorDashComponent},
-  {path : 'chatbox-dashboard', component: ChatBoxComponent},
 ];
 
 @NgModule({
